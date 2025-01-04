@@ -1,0 +1,265 @@
+/* ================== GENERAL STYLES ================== */
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body always fills the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================== NAVIGATION BAR ================== */
+
+.navbar {
+    border-bottom: #383737 3px solid; 
+    position: sticky;
+    top: 0;
+    background-color: #0a192f;
+    z-index: 100;
+}
+
+.navbar-highlight {
+    color: rgb(130, 160, 255);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-highlight:hover {
+    color: rgb(255, 255, 255);
+}
+
+.nav-link {
+    color: #b4b4b4;
+    margin: 0 .5rem;
+    transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+    color: rgb(130, 160, 255);
+}
+
+.nav-icon {
+    color: #ffffff;
+}
+
+.nav-icon:hover {
+    color: rgb(130, 160, 255);
+    transform: scale(1.5);
+    transition: transform 0.4s ease;
+}
+
+/* ================== MAIN SECTION ================== */
+
+.hero {
+    flex: 1; /* Fill remaining space */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    text-align: center;
+    color: #a3a3a3; /* Light text color */
+    padding: 0 2rem; /* Add padding for responsiveness */
+}
+  
+.hero-content {
+    max-width: 800px; /* Limit width for better readability */
+    margin-top: 8%;
+}
+
+.hero-content h1 {
+    color: rgb(104, 152, 255);
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    color: rgb(126, 126, 126);
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #2fb495;
+    border: 2px solid #49ddbb;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    box-shadow: 0px 4px 15px rgba(57, 204, 170, 0.3);
+}
+  
+.hero-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+    background-color: #13cfa3;
+    color: #0a192f;
+}
+
+/* General Section Styling */
+.skills-section {
+    text-align: center; /* Center-align the title */
+    padding: 5rem; /* Padding for the entire section */
+    background-color: #0a192f; /* Match the background color */
+    color: #ffffff; /* Text color */
+}
+
+.skills-section-title {
+    font-size: 2rem; /* Larger font size for the title */
+    font-weight: bold;
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+/* Cards Container */
+.skills-cards {
+    display: flex;
+    justify-content: space-between; /* Spread cards evenly */
+    gap: 1rem; /* Spacing between cards */
+}
+
+/* Card Styling */
+.skill-card {
+    position: relative; /* Set a positioning context for the pseudo-element */
+    background-color: #1f2937; /* Card background */
+    border: 1px solid #394152; /* Subtle border */
+    border-radius: 8px;
+    padding: 1.5rem 1rem; /* Add padding for space inside the card */
+    flex: 1;
+    text-align: left; /* Align content to the left */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Skill Title */
+.skill-title {
+    position: relative; /* Required for the ::before pseudo-element */
+    font-size: 1.2rem;
+    color: #149ea3; /* Text color for the heading */
+    margin: 0 0 1rem 0; /* Add margin below the heading */
+    padding-left: 1.5rem; /* Space for the vertical bar */
+    line-height: 1.5;
+}
+
+.skill-title::before {
+    content: ''; /* Creates the pseudo-element */
+    position: absolute; /* Allows precise placement */
+    left: 0; /* Aligns to the left edge of the card */
+    top: 0; /* Aligns with the top of the heading */
+    width: 4px; /* Thickness of the bar */
+    height: 100%; /* Matches the height of the h3 text */
+    background-color: #39ccaa; /* Bar color */
+    border-radius: 2px; /* Add rounded corners for a smoother design */
+}
+
+.skill-title span {
+    display: block; /* Make the second line appear below */
+    font-size: 1rem;
+    color: #64ffda; /* Highlight color */
+}
+
+/* Skill Description */
+.skill-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #a3a3a3;
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+    display: flex; /* Allow multiple icons to align horizontally */
+    gap: 1.5rem; /* Space between icons */
+    font-size: 3rem; /* Icon size */
+    color: #368d3a; /* Icon color */
+    margin-bottom: 1rem;
+}
+
+
+/* ================== FOOTER ================== */
+
+footer {
+    display: flex;
+    flex-direction: column; /* Stack arrow and text */
+    height: auto;
+    background-color: #141a24; /* Dark footer background */
+    color: #a3a3a3; /* Footer text color */
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #112240; /* Subtle border */
+    position: relative; /* Create positioning context for the arrow */
+}
+
+footer p {
+    margin-top: 1rem; /* Space between the arrow and footer text */
+}
+
+.scroll-to-top {
+    display: inline-block;
+    font-size: 2rem; /* Arrow size */
+    color: #5c726d; /* Arrow color */
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    z-index: 10; /* Ensure it's above other elements */
+    position: absolute; /* Position it relative to the footer */
+    bottom: 2rem; /* Adjust to place it halfway into the footer */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct horizontal alignment */
+    pointer-events: auto; /* Ensure it's clickable */
+}
+
+.scroll-to-top:hover {
+    color: #64ffda; /* Change color on hover */
+    transform: translateX(-50%) scale(1.2); /* Grow slightly on hover */
+}
+
+/* ================== DYNAMIC BACKGROUND ================== */
+
+.dynamic-background {
+    height: auto; /* Adjust height to fit content */
+    width: 100%; /* Full screen width */
+    background: linear-gradient(160deg, #063526, #153b47, #125c7c); /* New gradient colors */
+    background-size: 450% 300%; /* Oversized background for smooth animation */
+    animation: gradientAnimation 15s linear infinite; /* Animation properties */
+}
+
+/* ================== RESPONSIVE DESIGN ================== */
+
+@media (max-width: 768px) {
+
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 11%; /* Start position */
+    }
+    25% {
+        background-position: 33% 33%; /* Intermediate position */
+    }
+    50% {
+        background-position: 66% 50%; /* Middle position */
+    }
+    75% {
+        background-position: 33% 33%; /* Intermediate position */
+    }
+    100% {
+        background-position: 0% 11%; /* End position */
+    }
+}
