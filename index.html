@@ -32,7 +32,7 @@
                         <a class="nav-link" href="#about-section">.about()</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills-section">.skills()</a>
+                        <a class="nav-link" href="#skills-section"">.skills()</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects-section">.projects()</a>
@@ -90,13 +90,12 @@
                     <div class="about-image">
                         <img src="src/coding.jpg" alt="" class="about-coding-image">
                     </div>
-                    
                 </div>
             </section>
-            
+
             <!-- My Skills section -->
-            <section class="skills-section" id="skills-section">
-                <h2 class="skills-section-title">My Skills</h2>
+            <section class="skills-section">
+                <h2 class="skills-section-title" id="skills-section">My Skills</h2>
                 <div class="skills-cards">
                     <div class="skill-card">
                         <div class="skill-icon">
@@ -143,11 +142,13 @@
                 </div>
             </section>
 
-
             <!-- Contact section -->
             <section class="contact-section" id="contact-section">
                 <div class="contact-form">
                     <h2>Contact Me</h2>
+                    <p>
+                        If you're interested in working together or just want to say hi, feel free to send me a message using the form below. I'll get back to you as soon as possible!
+                    </p>
                     <form>
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
@@ -158,7 +159,7 @@
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" required></textarea>
                         
-                        <button type="submit">Submit</button>
+                        <button type="submit" class="resume-button">Submit</button>
                     </form>
                 </div>
                 <div class="contact-map">
