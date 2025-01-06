@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
     <head>
         <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="src/favicon.ico">
         <!-- Title -->
-        <title>Portfolio</title>
+        <title>Lucas Traverso</title>
         
         <!-- Font Awesome for Icons -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -27,16 +29,16 @@
                 <!-- Navigation Links -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">.about()</a>
+                        <a class="nav-link" href="#about-section">.about()</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">.experience()</a>
+                        <a class="nav-link" href="#skills-section">.skills()</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">.portfolio()</a>
+                        <a class="nav-link" href="#projects-section">.projects()</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">.contact()</a>
+                        <a class="nav-link" href="#contact-section">.contact()</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-icon" href="https://linkedin.com" target="_blank">
@@ -54,19 +56,46 @@
 
         <!-- Main section -->
         <div class="dynamic-background">
+            <!-- Hero Section -->
             <section class="hero">
                 <div class="hero-content">
+                    <div class="about-image">
+                        <img src="src/profile.jpg" alt="Lucas Traverso" class="circle-image">
+                    </div>
                     <h5 class="intro-text">Hi, my name is</h5>
                     <h1>Lucas Traverso.</h1>
                     <h2>I build things for the web.</h2>
                     <p class="description">
                         Front-end developer based in Buenos Aires, Argentina. I create responsive websites that are nice and easy to use.
                     </p>
-                    <a href="#" class="hero-button">Check out my projects!</a>
+                    <a href="#" class="resume-button">Download Resume</a>
+                </div>
+            </section>
+
+            <hr>
+            
+            <!-- About Me section -->
+            <section class="about-section" id="about-section">
+                <h2 class="about-section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Hi, I'm Lucas Traverso</h3>
+                        <p>
+                            I'm a front-end developer based in Buenos Aires, Argentina. I have a passion for web development and love to create websites that are visually appealing and easy to use. I have experience working with both front-end and back-end technologies, as well as design tools like Figma and Adobe XD.
+                        </p>
+                        <p>
+                            I'm currently looking for new opportunities to work with companies that value creativity and innovation. If you're interested in working together, feel free to get in touch with me!
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="src/coding.jpg" alt="" class="about-coding-image">
+                    </div>
+                    
                 </div>
             </section>
             
-            <section class="skills-section">
+            <!-- My Skills section -->
+            <section class="skills-section" id="skills-section">
                 <h2 class="skills-section-title">My Skills</h2>
                 <div class="skills-cards">
                     <div class="skill-card">
@@ -84,7 +113,7 @@
                             <i class="fa-brands fa-js-square"></i>
                         </div>
                         <h3 class="skill-title">Frontend Dev <span>React, JavaScript</span></h3>
-                        <p class="skill-description">Passionate about UI/UX. Over 5 years of development experience in JS, React frameworks.</p>
+                        <p class="skill-description">Passionate about UI/UX. Development experience in JS, React frameworks.</p>
                     </div>
             
                     <div class="skill-card">
@@ -92,12 +121,57 @@
                             <i class="fa-brands fa-html5" id="icon-html5"></i>
                             <i class="fa-brands fa-css3" id="icon-css3"></i>
                         </div>
-                        <h3 class="skill-title">Web Design <span>HTML5, CSS5</span></h3>
-                        <p class="skill-description">Skilled in creating and designing high-end visuals and animations with CSS3 and WebGL.</p>
+                        <h3 class="skill-title">Web Design <span>HTML5, CSS3</span></h3>
+                        <p class="skill-description">Skilled in creating and designing high-end visuals and animations with CSS3.</p>
                     </div>
                 </div>
             </section>
-            
+
+            <!-- Projects section -->
+            <section class="projects-section" id="projects-section">
+                <div>
+                    <h2>Recent Projects</h2>
+                    <p>Here are some of the projects I've worked on recently. Click on the images to learn more about each project.</p>
+                    <div class="projects-grid">
+                        <a href="project1.html" class="project-frame"></a>
+                        <a href="project2.html" class="project-frame"></a>
+                        <a href="project3.html" class="project-frame"></a>
+                        <a href="project4.html" class="project-frame"></a>
+                        <a href="project5.html" class="project-frame"></a>
+                        <a href="project6.html" class="project-frame"></a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Contact section -->
+            <section class="contact-section" id="contact-section">
+                <div class="contact-form">
+                    <h2>Contact Me</h2>
+                    <form>
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                        
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13135.123456789!2d-58.41620771669591!3d-34.58517491345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sar!4v1616438725831!5m2!1sen!2sar"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                    ></iframe>
+                </div>
+            </section>
         </div>
 
         <!-- Footer -->

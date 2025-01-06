@@ -17,6 +17,14 @@ html {
     padding: 0;
 }
 
+hr {
+    border: 0;
+    height: 2px;
+    background: #333;
+    background-image: linear-gradient(to right, #333, #ccc, #333);
+    margin: 1em 0;
+}
+
 /* ================== NAVIGATION BAR ================== */
 
 .navbar {
@@ -28,7 +36,7 @@ html {
 }
 
 .navbar-highlight {
-    color: rgb(130, 160, 255);
+    color: #5398d9;
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -57,7 +65,7 @@ html {
     transition: transform 0.4s ease;
 }
 
-/* ================== MAIN SECTION ================== */
+/* ================== HERO SECTION ================== */
 
 .hero {
     flex: 1; /* Fill remaining space */
@@ -68,10 +76,20 @@ html {
     color: #a3a3a3; /* Light text color */
     padding: 0 2rem; /* Add padding for responsiveness */
 }
-  
+
+.circle-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3%;
+}
+
 .hero-content {
-    max-width: 800px; /* Limit width for better readability */
-    margin-top: 8%;
+    max-width: 800px;
+    margin-top: 5%;
 }
 
 .hero-content h1 {
@@ -89,7 +107,7 @@ html {
     margin-bottom: 3rem;
 }
 
-.hero-button {
+.resume-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
@@ -101,165 +119,308 @@ html {
     box-shadow: 0px 4px 15px rgba(57, 204, 170, 0.3);
 }
   
-.hero-button:hover {
-    transform: scale(1.05);
-    transition: transform 0.5s ease;
+.resume-button:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
     background-color: #13cfa3;
     color: #0a192f;
 }
 
-/* General Section Styling */
+/* ================== ABOUT SECTION ================== */
+
+.about-section {
+    padding: 5rem;
+    color: #ffffff;
+}
+
+.about-section-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.about-text h3 {
+    color: #54c6ca;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.about-coding-image {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== SKILLS SECTION ================== */
+
 .skills-section {
-    text-align: center; /* Center-align the title */
-    padding: 5rem; /* Padding for the entire section */
-    background-color: #0a192f; /* Match the background color */
-    color: #ffffff; /* Text color */
+    text-align: center;
+    padding: 3em;
+    background-color: #0a192f;
+    color: #ffffff;
+    padding-bottom: 5rem;
+    position: relative; /* Ensure proper layout */
+    padding-top: 3rem; /* Adjust this to the height of your navbar */
+    margin-top: -2rem; /* Negative margin compensates for the extra space */
 }
 
 .skills-section-title {
-    font-size: 2rem; /* Larger font size for the title */
+    font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 2rem; /* Space below the title */
+    margin-bottom: 3rem;
 }
 
-/* Cards Container */
 .skills-cards {
     display: flex;
-    justify-content: space-between; /* Spread cards evenly */
-    gap: 1rem; /* Spacing between cards */
+    justify-content: space-between;
+    gap: 1rem;
 }
 
-/* Card Styling */
 .skill-card {
-    position: relative; /* Set a positioning context for the pseudo-element */
-    background-color: #1f2937; /* Card background */
-    border: 1px solid #394152; /* Subtle border */
+    position: relative;
+    background-color: #1f2937;
+    border: 1px solid #394152;
     border-radius: 8px;
-    padding: 1.5rem 1rem; /* Add padding for space inside the card */
+    padding: 1.5rem 1rem;
     flex: 1;
-    text-align: left; /* Align content to the left */
+    text-align: left;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px); /* Lift card on hover */
+    transform: translateY(-10px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* Skill Title */
 .skill-title {
-    position: relative; /* Required for the ::before pseudo-element */
+    position: relative;
     font-size: 1.2rem;
-    color: #149ea3; /* Text color for the heading */
-    margin: 0 0 1rem 0; /* Add margin below the heading */
-    padding-left: 1.5rem; /* Space for the vertical bar */
+    color: #149ea3;
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
     line-height: 1.5;
 }
 
 .skill-title::before {
-    content: ''; /* Creates the pseudo-element */
-    position: absolute; /* Allows precise placement */
-    left: 0; /* Aligns to the left edge of the card */
-    top: 0; /* Aligns with the top of the heading */
-    width: 4px; /* Thickness of the bar */
-    height: 100%; /* Matches the height of the h3 text */
-    background-color: #39ccaa; /* Bar color */
-    border-radius: 2px; /* Add rounded corners for a smoother design */
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #39ccaa;
+    border-radius: 2px;
 }
 
 .skill-title span {
-    display: block; /* Make the second line appear below */
+    display: block;
     font-size: 1rem;
-    color: #64ffda; /* Highlight color */
+    color: #64ffda;
 }
 
-/* Skill Description */
 .skill-description {
     font-size: 1rem;
     line-height: 1.5;
     color: #a3a3a3;
 }
 
-/* Skill Icon Styling */
 .skill-icon {
-    display: flex; /* Allow multiple icons to align horizontally */
-    gap: 1.5rem; /* Space between icons */
-    font-size: 3rem; /* Icon size */
-    color: #368d3a; /* Icon color */
+    display: flex;
+    gap: 1.5rem;
+    font-size: 3rem;
+    color: #368d3a;
     margin-bottom: 1rem;
 }
 
+/* ================== PROJECTS SECTION ================== */
+
+.projects-section {
+    padding: 4rem;
+    color: #ffffff;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem; /* Space between rectangles */
+    justify-content: center; /* Center the grid horizontally */
+    align-content: center; /* Center the grid vertically */
+    padding: 4rem;
+    color: #ffffff;
+}
+
+.project-frame {
+    display: block;
+    width: 100%;
+    padding-top: 56.25%; /* Maintain 16:9 aspect ratio */
+    background-color: #1b2029; /* Placeholder color */
+    border: 2px solid #696969; /* White border */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-frame:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2); /* Subtle shadow on hover */
+}
+
+/* ================== CONTACT SECTION ================== */
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contact Form */
+.contact-form {
+    flex: 1; /* Takes 50% of the width */
+    background-color: #2a2a2a;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact-form form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #fff;
+}
+
+.contact-form form input, .contact-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.contact-form form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-form form button:hover {
+    background-color: #45a049;
+}
+
+/* Contact Map */
+.contact-map {
+    flex: 1; /* Takes 50% of the width */
+    position: relative;
+}
+
+.contact-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
 
 /* ================== FOOTER ================== */
 
 footer {
     display: flex;
-    flex-direction: column; /* Stack arrow and text */
+    flex-direction: column;
     height: auto;
-    background-color: #141a24; /* Dark footer background */
-    color: #a3a3a3; /* Footer text color */
+    background-color: #141a24;
+    color: #a3a3a3;
     text-align: center;
     padding-top: 0.5rem;
     font-size: 0.8rem;
-    border-top: 1px solid #112240; /* Subtle border */
-    position: relative; /* Create positioning context for the arrow */
+    border-top: 1px solid #112240;
+    position: relative;
 }
 
 footer p {
-    margin-top: 1rem; /* Space between the arrow and footer text */
+    margin-top: 1rem;
 }
 
 .scroll-to-top {
     display: inline-block;
-    font-size: 2rem; /* Arrow size */
-    color: #5c726d; /* Arrow color */
+    font-size: 2rem;
+    color: #5c726d;
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;
-    z-index: 10; /* Ensure it's above other elements */
-    position: absolute; /* Position it relative to the footer */
-    bottom: 2rem; /* Adjust to place it halfway into the footer */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Correct horizontal alignment */
-    pointer-events: auto; /* Ensure it's clickable */
+    z-index: 10;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
 }
 
 .scroll-to-top:hover {
-    color: #64ffda; /* Change color on hover */
-    transform: translateX(-50%) scale(1.2); /* Grow slightly on hover */
+    color: #64ffda;
+    transform: translateX(-50%) scale(1.2);
 }
 
 /* ================== DYNAMIC BACKGROUND ================== */
 
 .dynamic-background {
-    height: auto; /* Adjust height to fit content */
-    width: 100%; /* Full screen width */
-    background: linear-gradient(160deg, #063526, #153b47, #125c7c); /* New gradient colors */
-    background-size: 450% 300%; /* Oversized background for smooth animation */
-    animation: gradientAnimation 15s linear infinite; /* Animation properties */
+    height: auto;
+    width: 100%;
+    background: linear-gradient(160deg, #063526, #153b47, #125c7c);
+    background-size: 450% 300%;
+    animation: gradientAnimation 15s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 11%;
+    }
+    25% {
+        background-position: 33% 33%;
+    }
+    50% {
+        background-position: 66% 50%;
+    }
+    75% {
+        background-position: 33% 33%;
+    }
+    100% {
+        background-position: 0% 11%;
+    }
 }
 
 /* ================== RESPONSIVE DESIGN ================== */
 
 @media (max-width: 768px) {
-
-}
-
-/* Keyframes for gradient animation */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 11%; /* Start position */
-    }
-    25% {
-        background-position: 33% 33%; /* Intermediate position */
-    }
-    50% {
-        background-position: 66% 50%; /* Middle position */
-    }
-    75% {
-        background-position: 33% 33%; /* Intermediate position */
-    }
-    100% {
-        background-position: 0% 11%; /* End position */
-    }
+    /* Placeholder for responsive styles */
 }
